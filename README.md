@@ -5,4 +5,4 @@ Projeto feito no Node + JS
 `npm install`
 
 ### Para rodar o projeto
-`npm run start-dev`
+`npm run startdev`
