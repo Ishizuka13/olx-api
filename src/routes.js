@@ -9,7 +9,6 @@ const UserValidator = require('./validators/UserValidator')
 const AuhtController = require('./controllers/AuthController');
 const UserController = require('./controllers/UserController');
 const AdsController = require('./controllers/AdsController');
-const UserValidator = require('./validators/UserValidator');
 
 router.get('/ping', (req, res) => {
     res.json({ pong: true });
@@ -20,7 +19,7 @@ router.get('/states', UserController.getStates);
 router.post('/user/signin', AuthValidator.signin, AuhtController.signin);
 router.post('/user/signup', AuthValidator.signup, AuhtController.signup); 
 
-router. get('/user/me', Auth.private, UserController.info)
+router.get('/user/me', Auth.private, UserController.info);
 router.put('/user/me', UserValidator.editAction, Auth.private, UserController.editAction);
 
 router.get('/categories', AdsController.getCategories);
